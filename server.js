@@ -1,7 +1,7 @@
 const express = require('express')
 const next = require('next')
 
-const port = parseInt(process.env.PORT, 10) || 3000
+const port = parseInt(process.env.PORT, 10) || 5000
 const dev = process.env.NODE_ENV !== 'production'
 
 const app = next({ dev })
@@ -13,7 +13,7 @@ app.prepare().then(() => {
       return handle(req, res)
     })
   
-    server.listen(port, err => {
+    server.listen(port,'0.0.0.0', err => {
       if (err) throw err
       console.log(`> Ready on http://localhost:${port}`)
     })
