@@ -6,7 +6,7 @@ import discoverPhotosList from './discover.json'
 import axios from 'axios';
 
 function  fetchData (param) {
-  return axios.get(param,{}).then((data)=>(data)).catch((err)=>{
+  return axios.get(param,{ mode: 'no-cors'}).then((data)=>(data)).catch((err)=>{
  })
 }
 
@@ -14,7 +14,7 @@ export function* fetchAdditionPhotos() {
   try {
     const response = yield call(
       fetchData,
-      "http://cytapi.telemaco.online/api/Destinazioni?token=7AB561B0-3CE6-4719-9450-C36CC91161CA&fbclid=IwAR1AKEPIlajEBMDPgvH8f-1HIwqgNCd9KkMUJ1WFbX_74OElto3-d8qYGe8", 
+      "https://cytapi.telemaco.online/api/Destinazioni?token=7AB561B0-3CE6-4719-9450-C36CC91161CA&fbclid=IwAR1AKEPIlajEBMDPgvH8f-1HIwqgNCd9KkMUJ1WFbX_74OElto3-d8qYGe8", 
     );
     // const response = additionalPlacesData;
     if (response) {
