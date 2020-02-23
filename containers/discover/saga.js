@@ -6,7 +6,7 @@ import discoverPhotosList from './discover.json'
 import axios from 'axios';
 
 function  fetchData (param) {
-  return axios.get(param,{}).then((data)=>{name:"sairam"}).catch((err)=>{
+  return axios.get(param,{}).then((data)=>(data)).catch((err)=>{
  })
 }
 
