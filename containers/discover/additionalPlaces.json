@@ -1,0 +1,146 @@
+[
+    {
+        "id": 26,
+        "nome": "Lago di Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/26.jpg",
+        "slug": "lago-di-garda"
+    },
+    {
+        "id": 3,
+        "nome": "Peschiera",
+        "url": "https://www.catchyourticket.com/img/destinazioni/3.jpg",
+        "slug": "peschiera"
+    },
+    {
+        "id": 25,
+        "nome": "Sirmione",
+        "url": "https://www.catchyourticket.com/img/destinazioni/25.jpg",
+        "slug": "sirmione"
+    },
+    {
+        "id": 4,
+        "nome": "Lazise",
+        "url": "https://www.catchyourticket.com/img/destinazioni/4.jpg",
+        "slug": "lazise"
+    },
+    {
+        "id": 5,
+        "nome": "Bardolino",
+        "url": "https://www.catchyourticket.com/img/destinazioni/5.jpg",
+        "slug": "bardolino"
+    },
+    {
+        "id": 6,
+        "nome": "Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/6.jpg",
+        "slug": "garda"
+    },
+    {
+        "id": 7,
+        "nome": "Torri del Benaco",
+        "url": "https://www.catchyourticket.com/img/destinazioni/7.jpg",
+        "slug": "torri-del-benaco"
+    },
+    {
+        "id": 8,
+        "nome": "Brenzone del Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/8.jpg",
+        "slug": "brenzone-del-garda"
+    },
+    {
+        "id": 9,
+        "nome": "Malcesine",
+        "url": "https://www.catchyourticket.com/img/destinazioni/9.jpg",
+        "slug": "malcesine"
+    },
+    {
+        "id": 10,
+        "nome": "Torbole",
+        "url": "https://www.catchyourticket.com/img/destinazioni/10.jpg",
+        "slug": "torbole"
+    },
+    {
+        "id": 11,
+        "nome": "Arco",
+        "url": "https://www.catchyourticket.com/img/destinazioni/11.jpg",
+        "slug": "arco"
+    },
+    {
+        "id": 12,
+        "nome": "Riva del Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/12.jpg",
+        "slug": "riva-del-garda"
+    },
+    {
+        "id": 13,
+        "nome": "Limone sul Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/13.jpg",
+        "slug": "limone-sul-garda"
+    },
+    {
+        "id": 14,
+        "nome": "Tremosine sul Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/14.jpg",
+        "slug": "tremosine-sul-garda"
+    },
+    {
+        "id": 19,
+        "nome": "Salò",
+        "url": "https://www.catchyourticket.com/img/destinazioni/19.jpg",
+        "slug": "salo"
+    },
+    {
+        "id": 24,
+        "nome": "Desenzano del Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/24.jpg",
+        "slug": "desenzano-del-garda"
+    },
+    {
+        "id": 18,
+        "nome": "Gardone Riviera",
+        "url": "https://www.catchyourticket.com/img/destinazioni/18.jpg",
+        "slug": "gardone-riviera"
+    },
+    {
+        "id": 16,
+        "nome": "Gargnano",
+        "url": "https://www.catchyourticket.com/img/destinazioni/16.jpg",
+        "slug": "gargnano"
+    },
+    {
+        "id": 21,
+        "nome": "Manerba del Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/21.jpg",
+        "slug": "manerba-del-garda"
+    },
+    {
+        "id": 22,
+        "nome": "Moniga del Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/22.jpg",
+        "slug": "moniga-del-garda"
+    },
+    {
+        "id": 23,
+        "nome": "Padenghe sul Garda",
+        "url": "https://www.catchyourticket.com/img/destinazioni/23.jpg",
+        "slug": "padenghe-sul-garda"
+    },
+    {
+        "id": 20,
+        "nome": "S.Felice del Benaco",
+        "url": "https://www.catchyourticket.com/img/destinazioni/20.jpg",
+        "slug": "sfelice-del-benaco"
+    },
+    {
+        "id": 15,
+        "nome": "Tignale",
+        "url": "https://www.catchyourticket.com/img/destinazioni/15.jpg",
+        "slug": "tignale"
+    },
+    {
+        "id": 17,
+        "nome": "Toscolano Maderno",
+        "url": "https://www.catchyourticket.com/img/destinazioni/17.jpg",
+        "slug": "toscolano-maderno"
+    }
+]
