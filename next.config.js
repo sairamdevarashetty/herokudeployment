@@ -11,5 +11,8 @@ module.exports = {
             })
         );
       return config
+    },
+    env: {
+      PORT: 5000
     }
 }
