@@ -10,6 +10,9 @@ import FeaturedPlaces from '../../components/FeaturedPlaces';
 import AdditionalPlaces from '../../components/AdditionalPlaces';
 import Footer from '../../components/Footer';
 import actions from './actions';
+import MobileHeader from '../../components/header/mobileHeader';
+import MobileFooter from '../../components/Footer/mobileFooter';
+import HeaderBottom from '../../components/headerbottom';
 
 function NoSSH(props) {
   if(typeof(window) === "undefined") {
@@ -39,11 +42,14 @@ class DiscoverContainer extends React.Component {
           <title>Home</title>
           <link rel="icon" href="/favicon.ico" />
           </Head>
+          <MobileHeader />
           <Header />
+          {/* <HeaderBottom /> */}
           <StaticImage />
           <FeaturedPlaces imagesList={discoverPhotos} />
           <AdditionalPlaces imagesList={additionalPhotos} />
           <Footer />
+          <MobileFooter />
         </div> 
        </DynamicModuleLoader>
     )

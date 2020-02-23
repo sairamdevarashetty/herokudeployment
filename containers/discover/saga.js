@@ -16,7 +16,6 @@ export function* fetchAdditionPhotos() {
       fetchData,
       "http://cytapi.telemaco.online/api/Destinazioni?token=7AB561B0-3CE6-4719-9450-C36CC91161CA&fbclid=IwAR1AKEPIlajEBMDPgvH8f-1HIwqgNCd9KkMUJ1WFbX_74OElto3-d8qYGe8", 
     );
-    console.log("RES", response);
     // const response = additionalPlacesData;
     if (response) {
       yield put(actions.fetchAdditionalPhotosApiSuccess(response));

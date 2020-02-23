@@ -1,18 +1,12 @@
 import React from 'react';
-// import $ from 'jquery';
 import dynamic from 'next/dynamic'
-
 const OwlCarousel = dynamic(import('react-owl-carousel'),{ssr:false});
-// const OwlCarousel = dynamic(
-//     () => import 'react-owl-carousel';
-//     { ssr: false }
-// ); 
-import dummyImagesList from './dummyImages.json';
 
 class FeaturedPlaces extends React.Component {
-    render(){
-        let { imagesList = dummyImagesList } = this.props;
-        console.log("imagesList", imagesList);
+    render() {
+        let { imagesList = [] } = this.props;
+        imagesList = imagesList.slice(0,4);
+        console.log("imagesList LE", imagesList.length);
         return(
             <div className="featured-places bg-grey">
                 <div className="container">
@@ -27,11 +21,27 @@ class FeaturedPlaces extends React.Component {
                         <div className="featured-places-row owl-carousel owl-theme featured-places-carousel owl-loaded">
                         {
                             <OwlCarousel
-                                items={imagesList.length}
                                 className="owl-theme"
-                                loop
+                                loop={true}
+                                responsiveClass
                                 margin={10}
-                                nav
+                                responsive={{
+                                    0:{
+                                        items:1,
+                                        loop:true,
+                                        nav:false
+                                    },
+                                    600:{
+                                        items:2,
+                                        loop:true,
+                                        nav:false
+                                    },
+                                    1000:{
+                                        items:4,
+                                        nav:true,
+                                        loop:false
+                                    }
+                                }}
                             >
                              {
                                 imagesList.map((data)=>(

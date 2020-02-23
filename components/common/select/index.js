@@ -7,7 +7,7 @@ const SearchIcon = () => (
 )
 
 class Select extends React.Component {
-    constructor(){
+    constructor() {
       super();
       this.state = {
         styleObject: {
@@ -94,16 +94,29 @@ class Select extends React.Component {
     }
    
     render () {
+      let self = this;
       return (
         <React.Fragment>
-          <div className="site-search">
+          <div className="site-search" 
+            onClick = {() => {
+              console.log("self", self.state.enableSuggestions);
+              self.setState({ enableSuggestions: false })
+            }}
+          >
             <div className="row itemsOfSearch">
               <div className="col-12">
                 <div className="search-div">
                   <searchicon>
                     <input
                       value = {this.state.textvalue} 
-                      placeholder="Choose a destination" type="text" name="paese1" id="autocomplete" autoComplete="off" onChange={this._handleSearch.bind(this) } />
+                      placeholder="Choose a destination" 
+                      type="text" 
+                      name="paese1" 
+                      id="autocomplete" 
+                      autoComplete="off"
+                      
+                      onChange={this._handleSearch.bind(this) }
+                    />
                     <div className="suggestions-1 suggest">
                       <div
                         className="autocomplete-suggestions"

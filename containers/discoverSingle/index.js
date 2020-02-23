@@ -10,6 +10,9 @@ import FeaturedCategories  from '../../components/FeaturedCategories';
 import UtilityPlace from '../../components/UtilityPlace';
 import Footer from '../../components/Footer';
 import DiscoverSingleFeature from '../../components/DiscoverSingleFeature'
+import MobileFooter from '../../components/Footer/mobileFooter';
+import MobileHeader from '../../components/header/mobileHeader';
+
 // import actions from './actions';
 
 function NoSSH(props) {
@@ -41,11 +44,13 @@ class DiscoverSingleContainer extends React.Component {
           <link rel="icon" href="/favicon.ico" />
           </Head>
           <DiscoverSingleHeader />
+          <MobileHeader />
           <DescriptionPlace />
           <FeaturedCategories />
           <UtilityPlace />
           <DiscoverSingleFeature />
           <Footer />
+          <MobileFooter />
         </div> 
        </DynamicModuleLoader>
     )
