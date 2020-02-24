@@ -6,8 +6,14 @@ import discoverPhotosList from './discover.json'
 import axios from 'axios';
 
 function  fetchData (param) {
-  return axios.get(param,{ mode: 'no-cors'}).then((data)=>(data)).catch((err)=>{
- })
+  return axios
+          .get(param,{ mode: 'no-cors'})
+          .then((response)=> {
+            console.log("Response", response);
+            return response.data 
+          })
+          .catch((err) => {
+           })
 }
 
 export function* fetchAdditionPhotos() {
