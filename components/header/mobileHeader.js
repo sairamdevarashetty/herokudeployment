@@ -96,7 +96,7 @@ export default class MobileHeader extends React.Component  {
                     <div className="mobile-header-wrapper">
                         <div className="site-logo">
                             <a href="/">
-                            <img src="img/logo.svg" />
+                            <img src="../../img/logo.svg" />
                             </a>
                         </div>
                         {/* <Select /> */}
