@@ -1,12 +1,12 @@
-// import {discoverReducer} from './reducer';
-// import {saga} from './saga';
+import {destinationReducer} from './reducer';
+import {saga} from './saga';
 
 export function getDiscoverSingleModule() {
     return {
         id: "discoverSingle",
         reducerMap: {
-            // discoverState: discoverReducer,
+            destinationState: destinationReducer,
         },
-        sagas: [],
+        sagas: [saga],
     };
 }

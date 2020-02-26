@@ -12,8 +12,8 @@ import Footer from '../../components/Footer';
 import DiscoverSingleFeature from '../../components/DiscoverSingleFeature'
 import MobileFooter from '../../components/Footer/mobileFooter';
 import MobileHeader from '../../components/header/mobileHeader';
-
-// import actions from './actions';
+import { useRouter, withRouter } from 'next/router'
+import actions from './actions';
 
 function NoSSH(props) {
   if(typeof(window) === "undefined") {
@@ -27,15 +27,13 @@ function NoSSH(props) {
 }
 
 class DiscoverSingleContainer extends React.Component {
-
   componentDidMount() {
-    // this.props.fetchDiscoverPhotos();
-    // this.props.fetchAdditionalPhotosApi();
+    this.props.fetchDestinationDetails(this.props.router.query.id);
   }
 
   render() {
-    const { discoverState:{ discoverPhotos, additionalPhotos} = {} } = this.props;
-    console.log("this.props", this.props);
+    const { destinationState:{ destionationDetails:[data] = []} = {} } = this.props;
+    console.log("destionationDetails", data);
     return (
       <DynamicModuleLoader modules={[getDiscoverSingleModule()]}>
         <div id="page-top">
@@ -43,12 +41,12 @@ class DiscoverSingleContainer extends React.Component {
           <title>Home</title>
           <link rel="icon" href="/favicon.ico" />
           </Head>
-          <DiscoverSingleHeader />
-          <MobileHeader />
-          <DescriptionPlace />
-          <FeaturedCategories />
-          <UtilityPlace />
-          <DiscoverSingleFeature />
+          <DiscoverSingleHeader data={data}/>
+          <MobileHeader data={data} />
+          <DescriptionPlace data={data}/>
+          <FeaturedCategories data={data}/>
+          <UtilityPlace data={data}/>
+          <DiscoverSingleFeature data={data} />
           <Footer />
           <MobileFooter />
         </div> 
@@ -67,12 +65,11 @@ const mapStateToProps = (state /*, ownProps*/) => {
   
 const mapDispatchToProps = (dispatch) => {
   return {
-    // fetchDiscoverPhotos: () => { dispatch(actions.fetchDiscoverPhotosApi()) },
-    // fetchAdditionalPhotosApi: () => {dispatch(actions.fetchAdditionalPhotosApi())}
+    fetchDestinationDetails: (destinationId) => { dispatch(actions.fetchDestinationDetails(destinationId)) },
   }
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(DiscoverSingleContainer)
+)(withRouter(DiscoverSingleContainer))

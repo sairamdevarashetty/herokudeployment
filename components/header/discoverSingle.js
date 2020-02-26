@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function () {
+export default function ({data={}}) {
     return (
         <section className="header-image header-place" style={{backgroundImage: 'url(/img/single-places/sirmione.jpg)'}}>
             <div className="container h-100">
                 <div className="title-header">
-                <h1><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Sirmione.</font></font></h1>
+                <h1><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{data.nome}</font></font></h1>
                 </div>
                 <div className="tabs-featured">
                 <section className="tabs">

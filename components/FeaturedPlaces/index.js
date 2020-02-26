@@ -46,7 +46,8 @@ class FeaturedPlaces extends React.Component {
                              {
                                 imagesList.map((data)=>(
                                     <div className="item place-item-featured">
-                                        <a href="/discover-single">
+                                        {/* <a href={`/discover-single/3`} as={`/discover-single/3`}> */}
+                                        <a href={`/discover-single/${data.id}`}>
                                             <div className="card-duplex">
                                                 <div className="card-photo">
                                                     <img src={data.url} />

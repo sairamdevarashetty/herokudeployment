@@ -1,4 +1,5 @@
-import react from 'react'
+import react from 'react';
+import { useRouter } from 'next/router'
 
 function CardComponent({ url, text }) {
     return (
