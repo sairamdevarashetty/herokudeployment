@@ -1,11 +1,19 @@
 import React from 'react';
 
 export default function({data={}}) {
+    console.log("FEATURED CATEGORIES", data);
+    const regex = /todo._gmap/g;
+    const keys = Object.keys(data).join("");
     return (
         <div className="featured-categories best-things-in-places">
             <div className="container">
                 <div className="title-section text-center">
-                <h3><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>The 3 best things to do and see in Sirmione</font></font></h3>
+                <h3><font style={{verticalAlign: 'inherit'}}>
+                    <font style={{verticalAlign: 'inherit'}}>
+                        The {keys.match(regex) && keys.match(regex).length} best things to do and see in {data.nome}
+                    </font>
+                    </font>
+                </h3>
                 </div>
                 <div className="featured-categories-grid">
                 <div className="row">

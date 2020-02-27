@@ -1,24 +1,27 @@
 import react from 'react';
 import { useRouter } from 'next/router'
 
-function CardComponent({ url, text }) {
+function CardComponent({ url, text, id }) {
     return (
         <div className="col-6 col-md-4 col-lg-2">
-            <div className="card-dummy__bg">
-                <img src={url} />
-                <div className="card-title">
-                    <h5><font style={{verticalAlign: 'inherit'}}>
-                        <font style={{verticalAlign: 'inherit'}}>
-                            {text}
-                        </font></font>
-                    </h5>
+            <a href={`/discover-single/${id}`}>
+                <div className="card-dummy__bg">
+                    <img src={url} />
+                    <div className="card-title">
+                        <h5><font style={{verticalAlign: 'inherit'}}>
+                            <font style={{verticalAlign: 'inherit'}}>
+                                {text}
+                            </font></font>
+                        </h5>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>                
     )
 };
 
 export default function AdditionalPlaces ({ imagesList = [] }) {
+    console.log("imagesList", imagesList);
     return (
         <div className="other-places">
             <div className="container">
@@ -35,8 +38,8 @@ export default function AdditionalPlaces ({ imagesList = [] }) {
                 <div className="other-places-grid">
                     <div className="row">
                         {
-                            imagesList.map(({ url, nome }) => (
-                                <CardComponent url={url} text={nome} />
+                            imagesList.map(({ url, nome, id }) => (
+                                <CardComponent url={url} text={nome} id={id} />
                             ))
                         }
                     </div>
