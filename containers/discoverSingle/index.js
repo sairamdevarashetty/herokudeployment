@@ -47,7 +47,7 @@ class DiscoverSingleContainer extends React.Component {
           <DiscoverSingleHeader data={data}/>
           <MobileHeader data={data} />
           <DescriptionPlace data={data}/>
-          <FeaturedCategories data={data}/>
+          <FeaturedCategories data={data} length={4}/>
           <UtilityPlace data={data}/>
           <DiscoverSingleFeature adviceData={adviceActivityDetails} data={data}/>
           <Footer />
