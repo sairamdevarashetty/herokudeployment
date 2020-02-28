@@ -5,7 +5,7 @@ function CompanyLogo() {
   return (
     <div className="col-1">
       <div className="site-logo">
-        <a href="/"><img src="img/logo.svg"/></a>
+        <a href="/"><img src="../../img/logo.svg"/></a>
       </div>
     </div>
   );

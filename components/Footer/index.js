@@ -11,7 +11,7 @@ export default function() {
                     <div className="col-12 col-md-4 col-lg-3">
                     <div className="footer-logo">
                         <a href="/">
-                        <img src="img/logo-footer.svg" />
+                        <img src="../../img/logo-footer.svg" />
                         </a>
                     </div>
                     </div>
