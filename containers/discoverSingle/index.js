@@ -31,7 +31,7 @@ function NoSSH(props) {
 class DiscoverSingleContainer extends React.Component {
   componentDidMount() {
     this.props.fetchDestinationDetails(this.props.router.query.id);
-    this.props.fetchActivityAdviceDetails(this.props.route.query.id);
+    this.props.fetchActivityAdviceDetails(this.props.router.query.id);
   }
 
   render() {
