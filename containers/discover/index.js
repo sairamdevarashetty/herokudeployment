@@ -44,7 +44,6 @@ class DiscoverContainer extends React.Component {
           </Head>
           <MobileHeader />
           <Header />
-          {/* <HeaderBottom /> */}
           <StaticImage />
           <FeaturedPlaces imagesList={discoverPhotos} />
           <AdditionalPlaces imagesList={additionalPhotos} />
