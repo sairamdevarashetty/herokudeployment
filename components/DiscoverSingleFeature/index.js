@@ -8,14 +8,21 @@ function Card({ cardData }) {
             </div>
             <div className="card-content">
                 <div className="card-info">
-                <div className="card-category"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{cardData.categoria}</font></font></div>
-                <div className="card-title">
-    <h5><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{cardData.titolo}</font></font></h5>
-                </div>
-                <div className="card-time"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{cardData.durata}</font></font></div>
+                    <div className="card-category"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{cardData.categoria}</font></font>
+                    </div>
+                    <div className="card-title">
+                        <h5><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{cardData.titolo}</font></font></h5>
+                    </div>
+                    {
+                        cardData.durata ?
+                        <div className="card-time"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{cardData.durata}</font></font>
+                        </div>
+                        :
+                        <div style={{marginBottom: '10px'}}></div>    
+                    }
                 </div>
                 <div className="card-price">
-    <span className="from-price"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>from </font></font></span><span className="price"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>€ {cardData.prezzo}</font></font></span>
+                    <span className="from-price"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>from </font></font></span><span className="price"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>€ {cardData.prezzo}</font></font></span>
                 </div>
             </div>
         </div>
