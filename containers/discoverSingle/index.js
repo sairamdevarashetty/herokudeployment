@@ -36,8 +36,6 @@ class DiscoverSingleContainer extends React.Component {
 
   render() {
     const { destinationState:{ destionationDetails:[data] = [], adviceActivityDetails} = {} } = this.props;
-    // const 
-    console.log("destionationDetails", data);
     return (
       <DynamicModuleLoader modules={[getDiscoverSingleModule()]}>
         <div id="page-top">
@@ -51,7 +49,7 @@ class DiscoverSingleContainer extends React.Component {
           <DescriptionPlace data={data}/>
           <FeaturedCategories data={data}/>
           <UtilityPlace data={data}/>
-          <DiscoverSingleFeature data={adviceActivityDetails} />
+          <DiscoverSingleFeature adviceData={adviceActivityDetails} data={data}/>
           <Footer />
           <MobileFooter />
         </div> 
