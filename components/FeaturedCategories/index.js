@@ -30,7 +30,7 @@ export default function({data={} ,length}) {
                         </div>
                         <div className="card-categories-details">
                         <p className="subtitle-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>From the remains of a Roman fortification</font></font></p>
-                        <h3 className="title-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Scaliger Castle</font></font></h3>
+                        <h3 className="title-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{data.todo1_name}</font></font></h3>
                         <p><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>
                             {data.todo1_desc}
                         </font></font></p>
@@ -45,7 +45,7 @@ export default function({data={} ,length}) {
                         </div>
                         <div className="card-categories-details">
                         <p className="subtitle-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Built in the early 1st century AD</font></font></p>
-                        <h3 className="title-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Caves of Catullus</font></font></h3>
+                        <h3 className="title-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{data.todo2_name}</font></font></h3>
                         <p className="content-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>
                             {data.todo2_desc}
                         </font></font></p>
@@ -61,7 +61,7 @@ export default function({data={} ,length}) {
                         </div>
                         <div className="card-categories-details">
                             <p className="subtitle-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>One of the most popular beaches</font></font></p>
-                            <h3 className="title-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Jamaica Beach</font></font></h3>
+                            <h3 className="title-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{data.todo3_name}</font></font></h3>
                             <p className="content-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>
                                 {data.todo3_desc}
                             </font></font></p>
@@ -80,7 +80,7 @@ export default function({data={} ,length}) {
                                 </div>
                                 <div className="card-categories-details">
                                     <p className="subtitle-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>One of the most popular beaches</font></font></p>
-                                    <h3 className="title-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Jamaica Beach</font></font></h3>
+                                    <h3 className="title-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{data.todo4_name}</font></font></h3>
                                     <p className="content-card"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>
                                         {data.todo4_desc}
                                     </font></font></p>
