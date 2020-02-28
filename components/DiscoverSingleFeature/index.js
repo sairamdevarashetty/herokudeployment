@@ -11,7 +11,10 @@ function Card({ cardData }) {
                     <div className="card-category"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{cardData.categoria}</font></font>
                     </div>
                     <div className="card-title">
-                        <h5><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{cardData.titolo}</font></font></h5>
+                        <h5><font style={{verticalAlign: 'inherit'}}>
+                            <font style={{verticalAlign: 'inherit', overflowWrap: 'break-word'}}>{cardData.titolo}</font>
+                            </font>
+                        </h5>
                     </div>
                     {
                         cardData.durata ?
