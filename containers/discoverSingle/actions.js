@@ -58,7 +58,9 @@ export function fetchDestinationDetailsFailure (payload) {
 export default {
     fetchDestinationDetails,
     fetchDestinationDetailsSuccess,
-    fetchDestinationDetailsFailure
+    fetchDestinationDetailsFailure,
+    fetchActivityAdviceDetails,
+    fetchAdviceActivityDetailsSuccess
     // fetchAdditionalPhotosApi,
     // fetchAdditionalPhotosApiSuccess,
     // fetchAdditionalPhotosApiFailure
