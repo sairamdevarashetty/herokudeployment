@@ -7,6 +7,19 @@ export function fetchDestinationDetails (destinationId) {
     }
 } 
 
+export function fetchActivityAdviceDetails(payload) {
+    return {
+        type : constants.FETCH_ADVICE_ACTIVITY_DETAILS,
+        payload
+    }
+}
+
+export function fetchAdviceActivityDetailsSuccess(payload) {
+    return {
+        type: constants.FETCH_ADVICE_ACTIVITY_DETAILS_SUCCESS,
+        payload
+    }
+}
 export function fetchDestinationDetailsSuccess (payload) {
     return {
         type : constants.FETCH_DESTINATION_DETAILS_SUCCESS,

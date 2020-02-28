@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Card() {
+function Card({ cardData }) {
     return (
         <div className="card-dummy">
             <div className="card-photo">
@@ -22,7 +22,7 @@ function Card() {
     )
 }
 
-export default function() {
+export default function({data=[]}) {
     let images = [];
     images.length = 12;
     images.fill({})
@@ -38,8 +38,8 @@ export default function() {
                     </div>
                     <div className="card-container">
                         {
-                            images.map((data) => (
-                                <Card />
+                            data.map((cardData) => (
+                                <Card cardData={cardData} />
                             ))
                         }
                     </div>

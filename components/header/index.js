@@ -49,11 +49,11 @@ const navButtons = [
   },
   {
     label: "Experience",
-    href: "/esperienze.html"
+    href: "/experience"
   },
   {
     label: "Discover",
-    href: "/discover.html"
+    href: "/"
   }
 ]
 
@@ -65,7 +65,7 @@ function NavButtons () {
         {
           navButtons.map((data={}, index) => (
             <li>
-              <a href="/tour-barca.html">
+              <a href={data.href}>
                 <font style={{verticalAlign: "inherit"}}>
                   <font style={{verticalAlign: "inherit"}}>
                     {data.label}

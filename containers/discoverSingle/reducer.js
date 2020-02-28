@@ -13,7 +13,12 @@ export const destinationReducer = (state={}, action) => {
         destionationDetails: [].concat(action.payload)
       }
       break;
-        
+    case(constants.FETCH_ADVICE_ACTIVITY_DETAILS_SUCCESS):
+      return {
+        ...state,
+        adviceActivityDetails: [].concat(action.payload)
+      }
+      break;
     default:
       return state
   }

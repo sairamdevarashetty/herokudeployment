@@ -12,6 +12,8 @@ import Footer from '../../components/Footer';
 import DiscoverSingleFeature from '../../components/DiscoverSingleFeature'
 import MobileFooter from '../../components/Footer/mobileFooter';
 import MobileHeader from '../../components/header/mobileHeader';
+import Header from '../../components/header';
+
 import { useRouter, withRouter } from 'next/router'
 import actions from './actions';
 
@@ -32,7 +34,8 @@ class DiscoverSingleContainer extends React.Component {
   }
 
   render() {
-    const { destinationState:{ destionationDetails:[data] = []} = {} } = this.props;
+    const { destinationState:{ destionationDetails:[data] = [], adviceActivityDetails} = {} } = this.props;
+    // const 
     console.log("destionationDetails", data);
     return (
       <DynamicModuleLoader modules={[getDiscoverSingleModule()]}>
@@ -41,12 +44,13 @@ class DiscoverSingleContainer extends React.Component {
           <title>Home</title>
           <link rel="icon" href="/favicon.ico" />
           </Head>
+          <Header />
           <DiscoverSingleHeader data={data}/>
           <MobileHeader data={data} />
           <DescriptionPlace data={data}/>
           <FeaturedCategories data={data}/>
           <UtilityPlace data={data}/>
-          <DiscoverSingleFeature data={data} />
+          <DiscoverSingleFeature data={adviceActivityDetails} />
           <Footer />
           <MobileFooter />
         </div> 
@@ -62,10 +66,11 @@ const mapStateToProps = (state /*, ownProps*/) => {
     ...state
   }
 }
-  
+
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchDestinationDetails: (destinationId) => { dispatch(actions.fetchDestinationDetails(destinationId)) },
+    fetchActivityAdviceDetails: (destinationId) => { dispatch(actions.fetchActivityAdviceDetails(destinationId)) },
   }
 }
 
