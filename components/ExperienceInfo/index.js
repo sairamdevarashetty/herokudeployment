@@ -186,6 +186,7 @@ export default function ExperienceInfo () {
                   <div className="experience-widget-inner" style={{position: 'relative'}}>
 
                   <OwlCarousel
+                    className="owl-theme"
                     items={1}
                     loop={true}
                   >

@@ -18,6 +18,7 @@ export default function ExperienceSingleHeader () {
     return (
         <section className="header-carousel-experience">
             <OwlCarousel
+                className="owl-theme"
                 loop
                 dots={true}
                 responsive={{
