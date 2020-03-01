@@ -47,7 +47,7 @@ export default function ExperienceFeaturedPlaces() {
                 {
                     imageData.map((data) => (
                         <div className="item card-dummy card-dummy-big">
-                            <a href="/experience-single.html">
+                            <a href="/experience-single">
                             <div className="card-photo">
                                 <img src={data.url} />
                             </div>

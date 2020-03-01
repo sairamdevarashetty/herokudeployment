@@ -1,5 +1,7 @@
 import React, { useState, useEffect }  from 'react';
-
+import dynamic from 'next/dynamic'
+dynamic(import('../../vendor/sticky-sidebar/jquery.sticky-sidebar'),{ssr:false});
+dynamic(import('../../vendor/sticky-sidebar/sticky-sidebar'),{ssr:false});
 
 function Title(){
     return(
@@ -68,7 +70,7 @@ const ExperienceBottomGrid = () => (
                         {
                             imageData.map((data) => (
                                 <div className="item card-dummy">
-                                <a href="/experience-single.html">
+                                <a href="/experience-single">
                                     <div className="card-photo">
                                     <img src="../img/experience/immagini-5.jpg" />
                                     </div>
