@@ -13,6 +13,7 @@ import DiscoverSingleFeature from '../../components/DiscoverSingleFeature'
 import MobileFooter from '../../components/Footer/mobileFooter';
 import MobileHeader from '../../components/header/mobileHeader';
 import Header from '../../components/header';
+import HeaderFunctionComponents from '../../components/header/headerFunctionComponents';
 
 import { useRouter, withRouter } from 'next/router'
 import actions from './actions';
@@ -44,6 +45,8 @@ class DiscoverSingleContainer extends React.Component {
           <link rel="icon" href="/favicon.ico" />
           </Head>
           <Header />
+          <HeaderFunctionComponents />
+
           <DiscoverSingleHeader data={data}/>
           <MobileHeader data={data} />
           <div className="description-place">

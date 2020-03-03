@@ -13,6 +13,7 @@ import actions from './actions';
 import MobileHeader from '../../components/header/mobileHeader';
 import MobileFooter from '../../components/Footer/mobileFooter';
 import HeaderBottom from '../../components/headerbottom';
+import HeaderFunctionComponents from '../../components/header/headerFunctionComponents';
 
 function NoSSH(props) {
   if(typeof(window) === "undefined") {
@@ -44,6 +45,7 @@ class DiscoverContainer extends React.Component {
           </Head>
           <MobileHeader />
           <Header />
+          <HeaderFunctionComponents />
           <StaticImage 
           title={[`Magnificent places,`,
             `unforgettable experiences.`]}

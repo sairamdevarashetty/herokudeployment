@@ -15,6 +15,7 @@ import MobileFooter from '../../components/Footer/mobileFooter';
 import { useRouter, withRouter } from 'next/router'
 import FeaturedCategories from '../../components/FeaturedCategories';
 import actions from './actions';
+import HeaderFunctionComponents from '../../components/header/headerFunctionComponents';
 
 function NoSSH(props) {
   if(typeof(window) === "undefined") {
@@ -39,6 +40,7 @@ class ExperienceContainer extends React.Component {
           <Header />
           <MobileHeader />
           <ExperienceHeader />
+          <HeaderFunctionComponents />
           <div className="featured-places featured-experience space-carousel-before">
             <ExperienceFeaturedPlaces />
           </div>

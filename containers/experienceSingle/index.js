@@ -18,6 +18,7 @@ import MobileHeader from '../../components/header/mobileHeader';
 import Header from '../../components/header';
 import Footer from '../../components/Footer';
 import ExperienceInfo from '../../components/ExperienceInfo'
+import HeaderFunctionComponents from '../../components/header/headerFunctionComponents';
 
 import { useRouter, withRouter } from 'next/router'
 import actions from './actions';
@@ -49,6 +50,7 @@ class ExperienceSingleContainer extends React.Component {
           <link rel="icon" href="/favicon.ico" />
           </Head>
           <Header />
+          <HeaderFunctionComponents />
           <ExperienceSingleHeader />
           <ExperienceInfo />
           <ExperienceSingleFeature />
