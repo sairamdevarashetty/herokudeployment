@@ -8,41 +8,44 @@ function TitleSection() {
         </div>
     )
 }
-export default function ExperienceFeaturedPlaces() {
-    const imageData = [
-        {
-            url : '../img/experience/immagini-1.jpg',
-            text: 'Mountaing Climbing With guide',
-            subtext: 'Mountain'
-        },
-        {
-            url : '../img/experience/immagini-2.jpg',
-            text: 'Mountaing Climbing With guide',
-            subtext: 'Mountain'
-        },
-        {
-            url : '../img/experience/immagini-3.jpg',
-            text: 'Mountaing Climbing With guide',
-            subtext:'Mountain'
-        },
-        {
-            url : '../img/experience/immagini-4.jpg',
-            text: 'Mountaing Climbing With guide',
-            subtext:'Mountain'
-        },
-        {
-            url : '../img/experience/immagini-5.jpg',
-            text: 'Mountaing Climbing With guide',
-            subtext:'Mountain'
-        }
-    ]
+const defaultData = [
+    {
+        url : '../img/experience/immagini-1.jpg',
+        text: 'Mountaing Climbing With guide',
+        subtext: 'Mountain'
+    },
+    {
+        url : '../img/experience/immagini-2.jpg',
+        text: 'Mountaing Climbing With guide',
+        subtext: 'Mountain'
+    },
+    {
+        url : '../img/experience/immagini-3.jpg',
+        text: 'Mountaing Climbing With guide',
+        subtext:'Mountain'
+    },
+    {
+        url : '../img/experience/immagini-4.jpg',
+        text: 'Mountaing Climbing With guide',
+        subtext:'Mountain'
+    },
+    {
+        url : '../img/experience/immagini-5.jpg',
+        text: 'Mountaing Climbing With guide',
+        subtext:'Mountain'
+    }
+]
 
+export default function ExperienceFeaturedPlaces({ imageData = defaultData, showTitle=true }) {
+   
     return (
-        <div className="featured-places featured-experience space-carousel-before">
-            <div className="container">
-                <div className="title-left">
-                    <TitleSection />
-                </div>
+        <div className="container">
+                {
+                    showTitle &&
+                    <div className="title-left">
+                        <TitleSection />
+                    </div>
+                }
                 <div className="card-container">
                 {
                     imageData.map((data) => (
@@ -66,7 +69,6 @@ export default function ExperienceFeaturedPlaces() {
                     ))
                 }
                 </div>
-            </div>
             </div>
     )
 }

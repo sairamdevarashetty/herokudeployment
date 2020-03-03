@@ -1,20 +1,33 @@
 import React from 'react';
 
-export default function ({data={}}) {
+export default function ({data={}, leftText, rightText, }) {
     return (
-        <div className="description-place">
-            <div className="container">
+        <div className="container">
                 <div className="title-left-right">
                 <div className="title-section">
-                    <h3><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Between history and present, </font></font><br /><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>a place full of emotions.</font></font></h3>
+                    <h3>
+                        {
+                            leftText.map((text) => (
+                                <>
+                                    <font style={{verticalAlign: 'inherit'}}>
+                                        <font style={{verticalAlign: 'inherit'}}>
+                                            {text}
+                                        </font>
+                                    </font>
+                                    <br />
+                                </>
+                            ))
+                        }
+                    </h3>
                 </div>
                 <div className="paragraph-section">
                     <p><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>
-                        {data.descrizione}  
-                        </font></font></p>
+                        {rightText}  
+                        </font>
+                        </font>
+                    </p>
                 </div>
                 </div>
             </div>
-        </div>
     );
 }

@@ -46,10 +46,25 @@ class DiscoverSingleContainer extends React.Component {
           <Header />
           <DiscoverSingleHeader data={data}/>
           <MobileHeader data={data} />
-          <DescriptionPlace data={data}/>
+          <div className="description-place">
+            <DescriptionPlace data={data}
+              leftText={[`Between history and present`, `a place full of emotions.`]}
+              rightText={`Sirmione has ancient origins, its popularity is due to the poet Catullo, who lived here, who declaimed it in some verses of his works. Like all the towns of Lake Garda, Sirmione also could not escape the dominion of the Lombards, subsequently driven out in 1197 by the Veronese, in 1220 the emperor Frederick II allowed the Sirmione to be able to fish freely in the lake's waters. After the dominion of the Scaligeri, Sirmione surrendered to the Republic of Venice in 1405, in 1452 the Cooperation of the Ancient Originals of Sirmione was established, which together with those of Torri del Benaco and Garda managed the rich fish market of San Vigilio`}
+            />
+          </div>
+
           <FeaturedCategories data={data} length={4}/>
+
           <UtilityPlace data={data}/>
-          <DiscoverSingleFeature adviceData={adviceActivityDetails} data={data}/>
+
+          <div className="featured-experience featured-exprience-of-place">
+            <DiscoverSingleFeature
+              adviceData={adviceActivityDetails}
+              headerText={`All the activities to do in Sirmione.`}
+              subHeaderText= {`All the activities to do in ${data && data.nome}.`}
+            />
+          </div>
+
           <Footer />
           <MobileFooter />
         </div> 

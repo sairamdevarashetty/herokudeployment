@@ -32,19 +32,27 @@ function Card({ cardData }) {
     )
 }
 
-export default function({adviceData=[], data={}}) {
+export default function({adviceData=[], headerText, subHeaderText}) {
     let images = [];
     images.length = 12;
     images.fill({})
     return (
-        <div className="featured-experience featured-exprience-of-place">
             <div className="container">
-                <div className="title-section text-center">
-                <h3><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Let us advise you.</font></font></h3>
-                </div>
+                
+                {
+                    headerText &&
+                    <div className="title-section text-center">
+                        <h3>
+                            <font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Let us advise you.</font></font>
+                        </h3>
+                    </div>
+                }
                 <div className="featured-grid-experience">
                     <div className="title-small">
-                        <h3><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>All the activities to do in {data.nome}.</font></font></h3>
+                        {
+                            subHeaderText &&
+                            <h3><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}> {subHeaderText} </font></font></h3>
+                        }
                     </div>
                     <div className="card-container">
                         {
@@ -55,6 +63,5 @@ export default function({adviceData=[], data={}}) {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }

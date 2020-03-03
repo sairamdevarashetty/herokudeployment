@@ -39,7 +39,9 @@ class ExperienceContainer extends React.Component {
           <Header />
           <MobileHeader />
           <ExperienceHeader />
-          <ExperienceFeaturedPlaces />
+          <div className="featured-places featured-experience space-carousel-before">
+            <ExperienceFeaturedPlaces />
+          </div>
           <ExperienceBottom />
           <AllCategories />
           <FeaturedCategories data={{
