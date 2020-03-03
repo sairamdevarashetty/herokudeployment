@@ -87,7 +87,7 @@ export default function HeaderFunctionComponents () {
                                 case 'button':
                                     return (
                                         <div className="item-filter">
-                                            <button className={`filter-btn option-filter ${rest.isSelected && 'active'}`} onClick={() => handleButtonClick(name, rest.isSelected)}>
+                                            <button className={`filter-btn option-filter ${rest.isSelected && 'active'}`} onClick={() => this.handleButtonClick(name, rest.isSelected)}>
                                                 <font style={{verticalAlign: 'inherit'}}>
                                                     <font style={{verticalAlign: 'inherit'}}>
                                                         {label}
