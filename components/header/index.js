@@ -53,7 +53,7 @@ const navButtons = [
   },
   {
     label: "Discover",
-    href: "/"
+    href: "/discover"
   }
 ]
 

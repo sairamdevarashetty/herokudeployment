@@ -4,6 +4,8 @@ import store from '../redux/store';
 import dynamic from 'next/dynamic';
 import { connect } from 'react-redux';
 
-const DefaultPage = dynamic(import('../containers/defaultPage'),{ssr:false});
+const DiscoverContainer = dynamic(import('../containers/discover'),{ssr:false});
 
-export default connect()(DefaultPage);
+
+
+export default connect()(DiscoverContainer);
