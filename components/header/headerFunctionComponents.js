@@ -81,6 +81,15 @@ export default function HeaderFunctionComponents () {
         setFilterObj(newFilterObj)
     }
 
+    const handleRangeOnInput = (fieldName, minValue=0, maxValue) => {
+        let newFilterObj = {
+            ...filterObj
+        }
+        newFilterObj[fieldName].minVal = minValue;
+        newFilterObj[fieldName].maxVal = maxValue;
+        
+        setFilterObj(newFilterObj)
+    }
     const mapUI = () => {
         let results = [];
         for (let key in filterObj) {
@@ -183,21 +192,21 @@ export default function HeaderFunctionComponents () {
                                     <div className="col-12">
                                     <div className="price-slider">
                                         <div className="price-range">
-                                        <input defaultValue={0} min={0} max={400} step={1} type="range" />
-                                        <input defaultValue={400} min={0} max={400} step={1} type="range" />
+                                            <input defaultValue={0} min={0} max={400} step={1} type="range" onInput={(e) => { handleRangeOnInput(name,e.currentTarget.value,filterObj[name].maxVal) }}/>
+                                            <input defaultValue={400} min={0} max={400} step={1} type="range" onInput={(e) => { handleRangeOnInput(name,filterObj[name].minVal,e.currentTarget.value) }}/>
                                         </div>
                                         <div className="value-slider">
                                         <div className="row">
                                             <div className="col-6">
                                             <span>
                                                 <span className="label-range-price"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Lowest price</font></font></span>
-                                                <input type="number" defaultValue={0} min={0} max={400} />
+                                                <input type="number" value={filterObj[name].minVal} defaultValue={0} min={0} max={400} />
                                             </span>
                                             </div>
                                             <div className="col-6">
                                             <span>
                                                 <span className="label-range-price"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>Maximum price</font></font></span>
-                                                <input type="number" defaultValue={400} min={0} max={400} />
+                                                <input type="number" value={filterObj[name].maxVal} defaultValue={400} min={0} max={400} />
                                             </span>
                                             </div>
                                         </div>
