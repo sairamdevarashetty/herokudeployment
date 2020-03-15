@@ -36,7 +36,7 @@ export function* fetchAdviceActivityDetails(args) {
   try {
     const response = yield call (
       fetchData,
-      `https://cytapi.telemaco.online/api/Pacchetti?token=7AB561B0-3CE6-4719-9450-C36CC91161CA&top=20&lingua=1&order=prezzo&destinazione=0&categoria=0&tags=0&datastart=1900-01-01&dataend=2099-12-31&prezzomin=0&prezzomax=0&speciale=0&fbclid=IwAR2yXG5M_O88GPBj8bM26-J7S0jcLKa_hhLvFcfSxDKDgvcDaust1TAOMiE`
+      `https://cytapi.telemaco.online/api/Pacchetti?token=7AB561B0-3CE6-4719-9450-C36CC91161CA&top=20&lingua=1&order=prezzo&destinazione=0&categoria=0&tags=0;&datastart=1900-01-01&dataend=2099-12-31&prezzomin=0&prezzomax=0&speciale=0&fbclid=IwAR2yXG5M_O88GPBj8bM26-J7S0jcLKa_hhLvFcfSxDKDgvcDaust1TAOMiE`
     );
     // const response = additionalPlacesData;
     if (response && response.length) {
