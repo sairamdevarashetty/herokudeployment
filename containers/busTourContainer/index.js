@@ -79,10 +79,10 @@ class DiscoverContainer extends React.Component {
             />
           </div>
           <div className="featured-places featured-experience no-spacing-top">
-            <ExperienceFeaturedPlaces
+            {/* <ExperienceFeaturedPlaces
               showTitle = {false}
               imageData={defaultData}
-            />
+            /> */}
           </div>
           <div className="experience-grid">
             <DiscoverSingleFeature 
