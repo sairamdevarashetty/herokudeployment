@@ -39,8 +39,8 @@ class ExperienceContainer extends React.Component {
         <div>
           <Header />
           <MobileHeader />
-          <ExperienceHeader />
           <HeaderFunctionComponents />
+          <ExperienceHeader />
           <div className="featured-places featured-experience space-carousel-before">
             <ExperienceFeaturedPlaces />
           </div>
