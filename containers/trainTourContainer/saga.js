@@ -20,7 +20,7 @@ export function* fetchBusApiData() {
   try {
     const response = yield call(
       fetchData,
-      "https://cytapi.telemaco.online/api/Destinazioni?token=7AB561B0-3CE6-4719-9450-C36CC91161CA&fbclid=IwAR1AKEPIlajEBMDPgvH8f-1HIwqgNCd9KkMUJ1WFbX_74OElto3-d8qYGe8", 
+      "https://cytapi.telemaco.online/api/Tag/13?token=7AB561B0-3CE6-4719-9450-C36CC91161CA&lingua=1", 
     );
     // const response = additionalPlacesData;
     if (response) {
@@ -35,7 +35,7 @@ export function* fetchDiscoverPhotos() {
   try {
       const response = yield call(
         fetchData,
-        "https://cytapi.telemaco.online/api/Destinazioni?token=7AB561B0-3CE6-4719-9450-C36CC91161CA&evidenza=1&fbclid=IwAR1HeI0TzW7MAJBaCATM19nRQWdMJaSljn10u-aZHieUCYKDnM48QuzCGbY", 
+        "https://cytapi.telemaco.online/api/Pacchetti?token=7AB561B0-3CE6-4719-9450-C36CC91161CA&top=20&lingua=1&order=prezzo&destinazione=0&categoria=0&tags=13;&datastart=1900-01-01&dataend=2099-12-31&prezzomin=0&prezzomax=0&speciale=0"
       );
       // const response = discoverPhotosList;
       if(response) {

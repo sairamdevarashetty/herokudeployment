@@ -33,15 +33,11 @@ function CartIcon(){
 const navButtons = [
   {
     label: "BoatTour",
-    href: "/tour-barca.html"
+    href: "/tour-boat"
   },
   {
     label: "BusTour",
-    href: "/tour-barca.html"
-  },
-  {
-    label: "BoatTour",
-    href: "/tour-barca.html"
+    href: "/tour-bus"
   },
   {
     label: "Tickets",
