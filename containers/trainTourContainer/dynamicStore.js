@@ -1,11 +1,11 @@
-import {discoverReducer} from './reducer';
+import {trainRouteReducer} from './reducer';
 import {saga} from './saga';
 
-export function getDiscoverModule() {
+export function getTrainRouteModule() {
     return {
-        id: "discover",
+        id: "trainTour",
         reducerMap: {
-            discoverState: discoverReducer,
+            discoverState: trainRouteReducer,
         },
         sagas: [saga],
     };

@@ -5,7 +5,7 @@ const initialState = {
   isUserLoggedIn:false  
 }
 
-export const discoverReducer = (state={}, action) => {
+export const trainRouteReducer = (state={}, action) => {
   switch(action.type) {
     case (constants.FETCH_DISCOVER_PHOTOS_API_SUCCESS):
       return {
@@ -27,6 +27,6 @@ export const discoverReducer = (state={}, action) => {
 }
 
 export default {
-  discoverReducer
+  trainRouteReducer
 };
 

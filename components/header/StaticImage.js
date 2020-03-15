@@ -1,7 +1,7 @@
 
-export default function StaticImage ({ title=[] }) {
+export default function StaticImage ({ title=[], backgroundImg="/img/places/torbole-4564211_1920.jpg" }) {
     return (
-        <section className="header-image" style={{backgroundImage: 'url(/img/places/torbole-4564211_1920.jpg)'}}>
+        <section className="header-image" style={{backgroundImage: `url(${backgroundImg})`}}>
             <div className="container h-100">
                 <div className="title-header">
                 <h1>

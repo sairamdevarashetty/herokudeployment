@@ -17,7 +17,7 @@ import MobileFooter from '../../components/Footer/mobileFooter';
 import HeaderBottom from '../../components/headerbottom';
 
 function NoSSH(props) {
-  if(typeof(window) === "undefined") {
+  if (typeof(window) === "undefined") {
     return <div>Loading....</div>
   }
   return (
@@ -53,6 +53,11 @@ class DiscoverContainer extends React.Component {
   }
 
   render() {
+    const { discoverState = {} } = this.props;
+    const additionalPhotos = discoverState.additionalPhotos || [];
+    const discoverPhotos = discoverState.discoverPhotos || [];
+    const busData=additionalPhotos.find((data) => (data.id===12)) || {};
+
     return (
       <DynamicModuleLoader modules={[getDiscoverModule()]}>
         <div id="page-top">
@@ -63,12 +68,14 @@ class DiscoverContainer extends React.Component {
           <MobileHeader />
           <Header />
           <HeaderFunctionComponents />
-          <StaticImage title={[`Boat tour,`, `sun, lake and relaxation.`]}/>
+          <StaticImage
+            title={[busData.nome, busData.sottotitolo]}
+            backgroundImg = {busData.url}
+          />
           <div className="intro-experience">
             <DescriptionPlace 
-              data={defaultData}
-              leftText={[`Choose the one that best suits you from all the boat tours.`]}
-              rightText={`Lorem Ipsum is a placeholder text used in the printing and printing sector. Lorem Ipsum has been considered the standard placeholder text since the sixteenth century, when an anonymous typographer took a font box and assembled them to prepare a sample text.`}
+              leftText={[busData.titolo]}
+              rightText={busData.descrizione_breve}
             />
           </div>
           <div className="featured-places featured-experience no-spacing-top">
@@ -79,7 +86,7 @@ class DiscoverContainer extends React.Component {
           </div>
           <div className="experience-grid">
             <DiscoverSingleFeature 
-              adviceData={[{"id":8,"categoria":"BIGLIETTI","titolo":"GARDALAND","durata":"","prezzo":35.5,"url":"https://www.catchyourticket.com/img/pacchetti/P8/1.jpg","slug":"gardaland"},{"id":9,"categoria":"BIGLIETTI","titolo":"SEALIFE","durata":"","prezzo":9,"url":"https://www.catchyourticket.com/img/pacchetti/P9/1.jpg","slug":"sealife"},{"id":11,"categoria":"BIGLIETTI","titolo":"CANEVA","durata":"","prezzo":26,"url":"https://www.catchyourticket.com/img/pacchetti/P11/1.jpg","slug":"caneva"},{"id":12,"categoria":"BIGLIETTI","titolo":"GARDALAND+SEALIFE","durata":"","prezzo":40.5,"url":"https://www.catchyourticket.com/img/pacchetti/P12/1.jpg","slug":"gardalandsealife"},{"id":13,"categoria":"BIGLIETTI","titolo":"PARCO NATURA VIVA","durata":"","prezzo":20,"url":"https://www.catchyourticket.com/img/pacchetti/P13/1.jpg","slug":"parco-natura-viva"},{"id":14,"categoria":"BIGLIETTI","titolo":"AQUARDENS","durata":"","prezzo":26,"url":"https://www.catchyourticket.com/img/pacchetti/P14/1.jpg","slug":"aquardens"},{"id":16,"categoria":"BIGLIETTI","titolo":"CAVOUR - DIRECT ENTRY","durata":"","prezzo":16,"url":"https://www.catchyourticket.com/img/pacchetti/P16/1.jpg","slug":"cavour-direct-entry"},{"id":18,"categoria":"BIGLIETTI","titolo":"FUNIVIA MALCESINE","durata":"","prezzo":22,"url":"https://www.catchyourticket.com/img/pacchetti/P18/1.jpg","slug":"funivia-malcesine"},{"id":21,"categoria":"BIGLIETTI","titolo":"LEOLANDIA","durata":"","prezzo":29.5,"url":"https://www.catchyourticket.com/img/pacchetti/P21/1.jpg","slug":"leolandia"},{"id":22,"categoria":"BIGLIETTI","titolo":"MOVIELAND","durata":"","prezzo":26,"url":"https://www.catchyourticket.com/img/pacchetti/P22/1.jpg","slug":"movieland"},{"id":23,"categoria":"BIGLIETTI","titolo":"PARCO SIGURTÀ","durata":"","prezzo":10,"url":"https://www.catchyourticket.com/img/pacchetti/P23/1.jpg","slug":"parco-sigurta"},{"id":25,"categoria":"BIGLIETTI","titolo":"PARCO TERMALE DEL GARDA","durata":"","prezzo":26,"url":"https://www.catchyourticket.com/img/pacchetti/P25/1.jpg","slug":"parco-termale-del-garda"}]} 
+              adviceData={discoverPhotos}
               subHeaderText= {`All our boat tour`}
             />
           </div>
