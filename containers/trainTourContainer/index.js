@@ -86,7 +86,7 @@ class DiscoverContainer extends React.Component {
           <div className="experience-grid">
             <DiscoverSingleFeature
               adviceData = {discoverPhotos} 
-              subHeaderText= {`All our boat tour`}
+              subHeaderText= {boatData.slug}
             />
           </div>
           <Footer />
