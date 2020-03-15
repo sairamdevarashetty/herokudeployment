@@ -67,7 +67,7 @@ export default function({adviceData=[], imageUrl, headerText, subHeaderText}) {
                     <div className="card-container">
                         {
                             adviceData.map((cardData) => (
-                                <Card cardData={cardData} />
+                                <Card cardData={cardData} imageUrl={imageUrl} />
                             ))
                         }
                     </div>
