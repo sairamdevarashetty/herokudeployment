@@ -1,11 +1,21 @@
 import React from 'react';
 
-function Card({ cardData }) {
+function Card({ cardData, imageUrl }) {
     return (
         <div className="card-dummy">
-            <div className="card-photo">
-                <img src={cardData.url} />
-            </div>
+            {
+                imageUrl ?
+                    <a href={imageUrl}>
+                        <div className="card-photo">
+                            <img src={cardData.url} />
+                        </div>
+                    </a>
+                :
+                    <div className="card-photo">
+                        <img src={cardData.url} />
+                    </div>
+            }
+
             <div className="card-content">
                 <div className="card-info">
                     <div className="card-category"><font style={{verticalAlign: 'inherit'}}><font style={{verticalAlign: 'inherit'}}>{cardData.categoria}</font></font>
@@ -32,7 +42,7 @@ function Card({ cardData }) {
     )
 }
 
-export default function({adviceData=[], headerText, subHeaderText}) {
+export default function({adviceData=[], imageUrl, headerText, subHeaderText}) {
     let images = [];
     images.length = 12;
     images.fill({})
