@@ -47,8 +47,9 @@ class DiscoverContainer extends React.Component {
           <Header />
           <HeaderFunctionComponents />
           <StaticImage 
-          title={[`Magnificent places,`,
+           title={[`Magnificent places,`,
             `unforgettable experiences.`]}
+           backgroundImg={"/img/places/torbole-4564211_1920.jpg"}
           />
           <FeaturedPlaces imagesList={discoverPhotos} />
           <AdditionalPlaces imagesList={additionalPhotos} />

@@ -56,6 +56,7 @@ class DiscoverContainer extends React.Component {
     const { discoverState = {} } = this.props;
     const additionalPhotos = discoverState.additionalPhotos || [];
     const discoverPhotos = discoverState.discoverPhotos || [];
+    console.log("DiscoverPhotos", discoverPhotos);
     const busData=additionalPhotos.find((data) => (data.id===12)) || {};
 
     return (
