@@ -89,7 +89,7 @@ class DiscoverContainer extends React.Component {
             <DiscoverSingleFeature 
               adviceData={discoverPhotos}
               subHeaderText= {busData.slug}
-              imageUrl={"/experience"}
+              imageUrl={`/experience-single/${busData.id}`}
             />
           </div>
           <Footer />
